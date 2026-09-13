@@ -43,5 +43,18 @@ git commit -m "feat: agregar dataset de parkinson y notebook inicial de explorac
 
 ---
 
+## 4. Configurar el "Kernel" en Visual Studio Code
+
+Dado que instalamos las librerías en un entorno virtual aislado con `uv`, debemos decirle a VSCode que use ese entorno para ejecutar el Notebook:
+
+1. Abre el archivo `.ipynb` en VSCode.
+2. Haz clic en el botón **"Select Kernel"** (o "Seleccionar Kernel") situado en la esquina superior derecha del editor.
+3. En el menú desplegable que aparece en el centro, elige **"Python Environments"** (Entornos de Python).
+4. Selecciona la opción que hace referencia a la carpeta `.venv` de tu proyecto (suele estar marcada con una estrella ⭐, ej. `Python 3.13.X (.venv)`).
+
+*¡Y listo! Al hacer esto, el cuaderno podrá importar librerías como Pandas y TensorFlow sin arrojar el error "ModuleNotFoundError".*
+
+---
+
 > **Próximos Pasos (Fase 2):**
 > Cuando pasemos a la Fase 2 (refactorización a scripts de Python modulares), añadiremos nuevos archivos como `data_preprocessing.py`, `model.py`, etc. Repetiremos el proceso de `git add` y `git commit` para seguir guardando los avances.
