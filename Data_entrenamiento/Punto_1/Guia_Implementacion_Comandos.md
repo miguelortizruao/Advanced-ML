@@ -2,6 +2,15 @@
 
 Esta guía documenta los comandos de terminal que se han ejecutado paso a paso para configurar el entorno de trabajo, instalar dependencias con `uv` y versionar el código utilizando `git`. 
 
+## 0. Inicialización del Proyecto (Reproducibilidad)
+
+Para garantizar que cualquier persona que clone este repositorio pueda arrancar el entorno exactamente en la misma versión de Python, el proyecto se inicializó originalmente definiendo la versión de Python:
+
+```bash
+uv init --python 3.13
+```
+*Esto crea el archivo `pyproject.toml` y el archivo oculto `.python-version` fijando la versión a 3.13. Si alguien se descarga el proyecto y ejecuta los comandos siguientes, `uv` descargará y usará automáticamente Python 3.13.*
+
 ## 1. Instalación de Dependencias con `uv`
 
 Dado que el directorio raíz de `Aprendizaje Avanzado` ya estaba inicializado con `uv` (existía el archivo `pyproject.toml`), simplemente agregamos las librerías necesarias para el análisis de datos y la creación de la red neuronal.
@@ -10,8 +19,7 @@ Dado que el directorio raíz de `Aprendizaje Avanzado` ya estaba inicializado co
 uv add jupyter pandas scikit-learn tensorflow matplotlib seaborn
 ```
 
-*Nota: Este comando descarga e instala todas estas librerías en el entorno virtual de Python gestionado por `uv`, de manera sumamente rápida, y actualiza el archivo `pyproject.toml`.*
-
+*Nota sobre Python y `uv`: ¿No necesitamos instalar Python? ¡No manualmente! Una de las grandes ventajas de `uv` es que gestiona Python por ti. Al crear el proyecto (cuando se generó el archivo `.python-version`), se definió qué versión de Python usar. Cuando ejecutamos `uv add`, `uv` automáticamente descarga esa versión exacta de Python (si no la tenías), crea un entorno virtual aislado (`.venv`) y descarga allí todas las librerías.*
 ## 2. Inicialización y Estado de Git
 
 Se verificó el estado de Git para asegurarnos de que el proyecto está bajo control de versiones.
