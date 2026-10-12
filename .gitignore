@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Carpetas de videos pesados (>100MB)
+**/Video/
+**/Videos/
+**/video/
+**/videos/
+*.mp4
+*.mkv
+*.mov
+.atl/
+
+# Guiones de sustentacion
+**/GUION_*
+**/*guion*
+**/*Guion*

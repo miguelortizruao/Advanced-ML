@@ -31,19 +31,37 @@ git status
 
 ## 3. Versionamiento del Trabajo Inicial (Git)
 
-Una vez que se generó el Jupyter Notebook (`Exploracion_Parkinson.ipynb`) y se colocó junto con los datos (`parkinsons.data`), se añadieron todos estos nuevos archivos a Git y se hizo el primer "commit".
+## 4. Estructura de Datasets Seleccionados (UCI Machine Learning Repository)
+
+Para cumplir con el nivel de rigor académico del taller y trabajar con volúmenes de datos representativos para Deep Learning, se seleccionaron y descargaron dos datasets oficiales de UCI:
+
+1. **Punto 1 (Clasificación Multiclase):** `Data_entrenamiento/Punto_1_Clasificacion/Dry_Bean_Dataset.csv`
+   - 13,611 registros y 16 características biométricas de granos.
+   - Objetivo: 7 clases morfológicas de semillas.
+
+2. **Punto 2 (Regresión Continua):** `Data_entrenamiento/Punto_2_Regresion/hour.csv`
+   - 17,379 registros con mediciones ambientales y temporales.
+   - Objetivo: Demanda horaria de alquiler de bicicletas (`cnt`).
+
+## 5. Notebook Principal
+
+El archivo maestro del taller se encuentra en:
+- `Taller/M1_Taller_MLP.ipynb`
+
+Contiene todas las secciones del informe académico (Autores, Introducción, Marco Teórico, Metodología, Resultados y Conclusiones), funciones modulares universales reutilizables, y la experimentación de 3 arquitecturas x 3 optimizadores para ambos puntos.
+
 
 ```bash
-# Se agregan todos los archivos de la carpeta Punto_1 al "Stage" de git
-git add "Data_entrenamiento/Punto_1"
+# Agregar los nuevos datasets y el notebook actualizado al Stage de git
+git add Data_entrenamiento Taller
 
-# Se confirma el cambio con un mensaje descriptivo siguiendo el formato de commits convencionales (feat)
-git commit -m "feat: agregar dataset de parkinson y notebook inicial de exploración"
+# Confirmar con mensaje descriptivo
+git commit -m "feat: migrar a datasets UCI Dry Bean y Bike Sharing con pipeline universal MLP"
 ```
 
 ---
 
-## 4. Configurar el "Kernel" en Visual Studio Code
+## 6. Configurar el "Kernel" en Visual Studio Code
 
 Dado que instalamos las librerías en un entorno virtual aislado con `uv`, debemos decirle a VSCode que use ese entorno para ejecutar el Notebook:
 

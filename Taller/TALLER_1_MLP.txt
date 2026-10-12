@@ -1,0 +1,7 @@
+TALLER_1_MLP
+Materia: Aprendizaje Avanzado
+Autor: Miguel Ángel Ortiz Roldán
+
+Link Colab: https://colab.research.google.com/drive/18MFLGdQv301wR-YgBWA6XVXtP4Vzihes?usp=sharing
+
+Video: https://youtu.be/TYiXG4_Ykmk
